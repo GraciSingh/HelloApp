@@ -1,10 +1,15 @@
 public class HelloApp {
     public static void main(String[] args) {
 
-        // Check if argument is passed, else use default "World"
-        String name = (args.length > 0) ? args[0] : "World";
+        String names;
 
-        // Print greeting
-        System.out.println("Hello, " + name + "!");
+        // Check if arguments exist
+        if (args.length > 0) {
+            names = String.join(", ", args); // Join all names
+        } else {
+            names = "World"; // Default value
+        }
+
+        System.out.println("Hello, " + names + "!");
     }
 }
